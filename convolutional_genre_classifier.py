@@ -61,7 +61,7 @@ if not pretrained:
 
 num_classes = 10
 
-if pretrained:
+if pretrained and os.path.exists('/src/model'):
     model = tf.keras.models.load_model('/src/model')
     training = True
 
